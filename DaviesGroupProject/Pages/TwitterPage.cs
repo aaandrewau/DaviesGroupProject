@@ -23,7 +23,8 @@ namespace DaviesGroupProject.Pages
             driver.SwitchTo().Window(driver.WindowHandles.Last());
             WaitUntilPageIsLoaded();
             Assert.That(driver.Url.Contains("https://twitter.com/Davies_Group"));
-            Assert.That(groupTittle.Text == "Davies Group");            
+            Thread.Sleep(5000);
+            Assert.That(groupTittle.Text.Contains("Davies Group"));            
             return this;
         }
 
